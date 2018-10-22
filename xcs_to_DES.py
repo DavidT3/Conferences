@@ -1,5 +1,6 @@
-with open("/home/rw264/Documents/imageTools-dev/input.txt") as afile:
+with open("input.txt") as afile:
     contents=afile.readlines()
+
 
 def xcs_to_des(line):
     #print("0", line)
@@ -15,6 +16,8 @@ def xcs_to_des(line):
     line = line.replace("''' ",'*')
     line = line.replace("'''","*")
     return line
-with open("/home/rw264/Documents/imageTools-dev/output.txt","w+") as outfile:
+
+
+with open("output.txt","w+") as outfile:
     for line in contents:
         outfile.write(xcs_to_des(line))
