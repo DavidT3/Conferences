@@ -400,19 +400,27 @@ def generate_out_file(db, table_names):
         return past_string
 
     def gather_sections(confs):
-        init_string = "'''Conference announcements'''\n" \
-                      "For contributions, please go to [[TalksArchive | this page]]\n\n" \
-                      "To see what other conferences are coming up, [[http://www1.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/| this page ]] is a good resource.\n\n" \
-                      "-----\n\n" \
-                      "'''DES version of the conference list'''\n" \
-                      "(Remember to refresh page on the DES_FILE as your browser will use a cached copy otherwise!)\n\n" \
-                      "[[ https://www.acru.ukzn.ac.za/~xcs/wiki/uploads/Restricted/ConferencePlussList/DES_FILE | DES_FILE ]]\n\n" \
-                      "[[ https://www.acru.ukzn.ac.za/~xcs/wiki/index.php/Restricted/ConferencePlussList?action=upload | To Change DES_FILE ]]\n\n" \
-                      "-----\n\n"
+        if group == 'xcs':
+            init_string = "'''Conference announcements'''\n" \
+                          "For contributions, please go to [[TalksArchive | this page]]\n\n" \
+                          "To see what other conferences are coming up, [[http://www1.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/| this page ]] is a good resource.\n\n" \
+                          "-----\n\n" \
+                          "'''DES version of the conference list'''\n" \
+                          "(Remember to refresh page on the DES_FILE as your browser will use a cached copy otherwise!)\n\n" \
+                          "[[ https://www.acru.ukzn.ac.za/~xcs/wiki/uploads/Restricted/ConferencePlussList/DES_FILE | DES_FILE ]]\n\n" \
+                          "[[ https://www.acru.ukzn.ac.za/~xcs/wiki/index.php/Restricted/ConferencePlussList?action=upload | To Change DES_FILE ]]\n\n" \
+                          "-----\n\n"\
+                          "'''If you are attending any of these conferences, or spot an issue with this page, EMAIL ME at david.turner@sussex.ac.uk'''\n\n" \
+                          "-----\n\n"
+            dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), reg_open(confs), no_ab_reg(confs),
+                        ab_reg_clsd_future_(confs), past(confs)]
+            dat_string = init_string + '\n'.join(dat_list)
 
-        dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), no_ab_reg(confs), reg_open(confs),
-                    ab_reg_clsd_future_(confs), past(confs)]
-        dat_string = init_string + '\n'.join(dat_list)
+        elif group == 'des':
+            init_string = "*Please email me at david.turner@sussex.ac.uk if you spot any problems with this page.* \n\n"
+            dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), reg_open(confs), no_ab_reg(confs),
+                        ab_reg_clsd_future_(confs)]
+            dat_string = init_string + '\n'.join(dat_list)
 
         return dat_string
 
@@ -440,7 +448,7 @@ def generate_out_file(db, table_names):
 
     with open('generated_lists/des_conference_list_{date}.txt'.format(date=cur_date.strftime('%d%m%y')), 'w') as des_conf:
         group = 'des'
-        des_conf.writelines(gather_sections(all_conf).split('-----')[-1])
+        des_conf.writelines(gather_sections(all_conf))
     des_conf.close()
 
     write_des_out(cur_date)
