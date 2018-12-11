@@ -483,8 +483,8 @@ def write_des_out(cur_date):
 
 if __name__ == "__main__":
     the_db = init_db(db_name='ConferenceManager')
-    read_legacy_conf(the_db)
-    #add_conferences(db=the_db, table_name='Conferences')  # Conferences table contains entries from conf_manager.py
+    #read_legacy_conf(the_db)
+    add_conferences(db=the_db, table_name='Conferences')  # Conferences table contains entries from conf_manager.py
     generate_out_file(db=the_db, table_names=['LegacyConferences', 'Conferences'])
 
 
