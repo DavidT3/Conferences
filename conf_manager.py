@@ -215,14 +215,25 @@ def generate_out_file(db, table_names):
         except AttributeError:
             form_reg = ''
 
+        expec = ['_id', 'Name', 'Gmaps URL', 'Place Name', 'URL', 'URL Label', 'Abstract Deadline',
+                 'Registration Deadline', 'Start Date', 'End Date', 'XCS Attending', 'Date Added']
         if group == 'xcs':
-            return template.format(Name=record['Name'], GmapsURL=record['Gmaps URL'], PlaceName=record['Place Name'],
-                               FormattedDate=formatted_date, URL=record['URL'], URLLabel=record['URL Label'],
-                               ABDEAD=form_abs, REGDEAD=form_reg, members=record['XCS Attending'])
+            entry = template.format(Name=record['Name'], GmapsURL=record['Gmaps URL'], PlaceName=record['Place Name'],
+                                    FormattedDate=formatted_date, URL=record['URL'], URLLabel=record['URL Label'],
+                                    ABDEAD=form_abs, REGDEAD=form_reg, members=record['XCS Attending'])
+            for rec in record:
+                if rec not in expec:
+                    entry += "-->{fieldname}: {content}\n".format(fieldname=rec, content=record[rec])
+            return entry
+
         if group == 'des':
-            return template.format(Name=record['Name'], GmapsURL=record['Gmaps URL'], PlaceName=record['Place Name'],
-                                   FormattedDate=formatted_date, URL=record['URL'], URLLabel=record['URL Label'],
-                                   ABDEAD=form_abs, REGDEAD=form_reg)
+            entry = template.format(Name=record['Name'], GmapsURL=record['Gmaps URL'], PlaceName=record['Place Name'],
+                                    FormattedDate=formatted_date, URL=record['URL'], URLLabel=record['URL Label'],
+                                    ABDEAD=form_abs, REGDEAD=form_reg)
+            for rec in record:
+                if rec not in expec:
+                    entry += "-->{fieldname}: {content}\n".format(fieldname=rec, content=record[rec])
+            return entry
 
     def this_month(confs):
         month_string = "'''Added in " + cur_date.strftime('%B') + ' ' + cur_date.strftime('%Y') + ":'''\n\n"
@@ -421,7 +432,6 @@ def generate_out_file(db, table_names):
             dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), reg_open(confs), no_ab_reg(confs),
                         ab_reg_clsd_future_(confs)]
             dat_string = init_string + '\n'.join(dat_list)
-
         return dat_string
 
     cur_date = datetime.now().date()
@@ -460,15 +470,12 @@ def write_des_out(cur_date):
     afile.close()
 
     def xcs_to_des(oneline):
-        # print("0", line)
         if oneline.find("[[") != -1:
             start = oneline.find("[[")
             end = oneline.find("]]")
             middle = oneline.find('|')
-            new_line = oneline[0:start].replace("(", "") + " \"" + oneline[middle + 1:end] + "\":" + oneline[
-                                                                                               start + 2:middle].replace(
-                " ", "") + "\n"
-            # print("1",new_line)
+            new_line = oneline[0:start].replace("(", "") + " \"" + oneline[middle + 1:end] + "\":" + \
+                       oneline[start + 2:middle].replace(" ", "") + "\n"
             oneline = new_line
         oneline = oneline.replace("*", '* ')
         oneline = oneline.replace("-->", "** ")
@@ -486,6 +493,7 @@ if __name__ == "__main__":
     #read_legacy_conf(the_db)
     add_conferences(db=the_db, table_name='Conferences')  # Conferences table contains entries from conf_manager.py
     generate_out_file(db=the_db, table_names=['LegacyConferences', 'Conferences'])
+    #generate_out_file(db=the_db, table_names=['tester'])
 
 
 
