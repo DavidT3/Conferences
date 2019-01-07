@@ -428,7 +428,7 @@ def generate_out_file(db, table_names):
             dat_string = init_string + '\n'.join(dat_list)
 
         elif group == 'des':
-            init_string = "*Please email me at david.turner@sussex.ac.uk if you spot any problems with this page.* \n\n"
+            init_string = "Please email me at david.turner@sussex.ac.uk if you spot any problems with this page. \n\n"
             dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), reg_open(confs), no_ab_reg(confs),
                         ab_reg_clsd_future_(confs)]
             dat_string = init_string + '\n'.join(dat_list)
