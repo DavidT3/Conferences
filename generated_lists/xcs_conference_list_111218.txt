@@ -1,0 +1,504 @@
+'''Conference announcements'''
+For contributions, please go to [[TalksArchive | this page]]
+
+To see what other conferences are coming up, [[http://www1.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/| this page ]] is a good resource.
+
+-----
+
+'''DES version of the conference list'''
+(Remember to refresh page on the DES_FILE as your browser will use a cached copy otherwise!)
+
+[[ https://www.acru.ukzn.ac.za/~xcs/wiki/uploads/Restricted/ConferencePlussList/DES_FILE | DES_FILE ]]
+
+[[ https://www.acru.ukzn.ac.za/~xcs/wiki/index.php/Restricted/ConferencePlussList?action=upload | To Change DES_FILE ]]
+
+-----
+
+'''If you are attending any of these conferences, or spot an issue with this page, EMAIL ME at david.turner@sussex.ac.uk'''
+
+-----
+
+'''Added in December 2018:'''
+
+*'''Testing Gravity 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/search/SFU+Harbour+Center,+Vancouver,+BC,+Canada| SFU Harbour Center, Vancouver, BC, Canada]])
+-->Date: January 23-26 2019
+-->URL: [[www.sfu.ca.physics/cosmology/TestingGravity2019 | TestGrav2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 22/01/19
+-->XCS Members Attending: 
+
+*'''Kavli Summer Program In Astrophysics 2019: Machine Learning in the era of large astronomical surveys:'''
+-->Location: ([[https://www.google.co.uk/maps/search/UC+Santa+Cruz| UC Santa Cruz]])
+-->Date: July 08-August 16 2019
+-->URL: [[kspa.soe.ucsc.edu/2019| KSPA2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 20/01/19
+-->XCS Members Attending: 
+
+*'''Python in Astronomy 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Space+Telescope+Science+Institute,+Baltimore| Space Telescope Science Institute, Baltimore]])
+-->Date: July 29-August 02 2019
+-->URL: [[openastronomy.org/pyastro/2019/| PyAstro2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 31/01/19
+-->XCS Members Attending: 
+
+*'''Astronomical Data Archives:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Sydney,+Australia| Sydney, Australia]])
+-->Date: August 05-08 2019
+-->URL: [[| ]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Non-Standard Cosmology Probes:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Center+for+Theoretical+Physics,+Polish+Academy+of+Sciences+Al.+Lotnikow+32/46,+Warsaw,+Poland| Center for Theoretical Physics, Polish Academy of Sciences Al. Lotnikow 32/46, Warsaw, Poland]])
+-->Date: August 25-September 15 2019
+-->URL: [[https://www.aspenphys.org/physicists/summer/program/currentworkshops.html | ASPEN2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 31/01/19
+-->XCS Members Attending: 
+
+*'''Astro Hack Week 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Kavli+Institute+for+Cosmology,+Cambridge| Kavli Institute for Cosmology, Cambridge]])
+-->Date: August 26-30 2019
+-->URL: [[https://www.kicc.cam.ac.uk/events/astrohackweek19/ | AstroHack2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+
+'''Abstracts/Registration Closing Soon:'''
+
+*'''Winter School on Astronomy 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/place/B+M+Birla+Science+Centre,+Ambedkar+Colony,+Khairatabad,+Hyderabad,+Telangana+500004/@17.4032705,78.4678668,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9760af27cd23:0xc491cbcddd39c28a!8m2!3d17.4032208!4d78.4700439| ]])
+-->Date: February 19-23 2019
+-->URL: [[https://astrowin19.wixsite.com/astrowin19| Winter School]]
+-->Abstract Deadline: 
+-->Registration Deadline: 15/12/18
+-->XCS Members Attending: 
+
+*'''Data Analysis and Cloud Computing:'''
+-->Location: ([[| London]])
+-->Date: March 11-12 2019
+-->URL: [[https://cloud-computing.insightconferences.com/registration.php| DACC]]
+-->Abstract Deadline: 14/12/18
+-->Registration Deadline: 14/12/18
+-->XCS Members Attending: 
+
+*'''Panchromatic Panoramic Studies of Galaxy Clusters:'''
+-->Location: ([[https://www.google.co.uk/maps/place/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2%E5%A4%A9%E6%96%87%E5%8F%8A%E5%A4%A9%E6%96%87%E7%89%A9%E7%90%86%E7%A0%94%E7%A9%B6%E6%89%80+Institute+of+Astronomy+and+Astrophysics,+Academia+Sinica/@25.0213258,121.5360683,17z/data=!3m1!4b1!4m5!3m4!1s0x3442aa27e7b5628f:0x48cd3311da9714d8!8m2!3d25.021321!4d121.538257 | ]])
+-->Date: March 11-13 2019
+-->URL: [[https://events.asiaa.sinica.edu.tw/workshop/20190311/index.php| ASIAA]]
+-->Abstract Deadline: 15/12/18
+-->Registration Deadline: 31/01/19
+-->XCS Members Attending: 
+
+*'''CosmoCruise 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Venice,+COSTA+terminal/@45.4375715,12.3048194,16z/data=!3m1!4b1 | ]])
+-->Date: August 18-25 2019
+-->URL: [[http://www.cosmocruise.org/| CosmoCruise]]
+-->Abstract Deadline: 28/11/18
+-->Registration Deadline: 15/12/18
+-->XCS Members Attending: 
+
+
+'''Still open for Abstract and Registration:'''
+
+*'''TRACING COSMIC EVOLUTION WITH CLUSTERS OF GALAXIES:'''
+-->Location: ([[https://www.google.com/maps/place/39030+Sexten,+Province+of+Bolzano+-+South+Tyrol,+Italy/data=!4m2!3m1!1s0x4779d478ad01e18f:0x96f515e9bde5db0d?sa=X&ved=2ahUKEwivtZrk0KbdAhWHz4UKHUtbBS4Q8gEwEnoECAoQCw | Sesto, 39030 Province of Bolzano - South Tyrol, Italy ]])
+-->Date: July 08-12 2019
+-->URL: [[http://www.sexten-cfa.eu/event/tracing-cosmic-evolution-with-clusters-of-galaxies/| Sexten]]
+-->Abstract Deadline: 30/04/19
+-->Registration Deadline: 30/04/19
+-->XCS Members Attending: 
+
+
+'''Still open for Registration but Abstract Deadline has passed:'''
+
+*'''Cosmology on Safari 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/place/University+of+KwaZulu-Natal/@-29.8674172,30.9785385,17z/data=!3m1!4b1!4m5!3m4!1s0x1ef7aa19be561e9b:0x466ccd1c4424b673!8m2!3d-29.8674219!4d30.9807272| Astrophysics & Cosmology Research Unit, University of KwaZulu-Natal, Westville Campus, Durban, 4041, South Africa ]])
+-->Date: March 03-09 2019
+-->URL: [[https://acru.ukzn.ac.za/~cosmosafari2019/| Cosmo Safari 2019]]
+-->Abstract Deadline: 10/12/18
+-->Registration Deadline: 15/01/19
+-->XCS Members Attending: 
+
+*'''CosmoCruise 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Venice,+COSTA+terminal/@45.4375715,12.3048194,16z/data=!3m1!4b1 | ]])
+-->Date: August 18-25 2019
+-->URL: [[http://www.cosmocruise.org/| CosmoCruise]]
+-->Abstract Deadline: 28/11/18
+-->Registration Deadline: 15/12/18
+-->XCS Members Attending: 
+
+
+'''No abstract or registration deadlines:'''
+
+*'''Xray 2019:'''
+-->Location: ([[| Bologna, Itlay]])
+-->Date: September 08-13 2019
+-->URL: [[http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/getMeetings.html?number=5685| Xray 2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''KICC 10th Anniversary Symposium:'''
+-->Location: ([[https://www.google.com/maps/place/Kavli+Institute+for+Cosmology/@52.2139879,0.0940317,15z/data=!4m2!3m1!1s0x0:0xa806c0ff194e86fe?sa=X&ved=2ahUKEwiY1vWazqbdAhWp4IUKHW0DDBQQ_BIwCnoECAoQCw | Cambridge London, UK, CB3 0HA ]])
+-->Date: July 22-26 2019
+-->URL: [[http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/getMeetings.html?number=5760| KICC]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''LSST 2019 Project and Community Workshop:'''
+-->Location: ([[https://www.google.com/maps/place/Tucson,+AZ,+USA/@32.1558328,-111.02389,11z/data=!3m1!4b1!4m5!3m4!1s0x86d665410b2ced2b:0x73c32d384d16c715!8m2!3d32.2226066!4d-110.9747108 | Tucson, AZ, USA ]])
+-->Date: August 12-16 2019
+-->URL: [[http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/getMeetings.html?number=5765| LSST2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''234th Meeting of the American Astronomical Society:'''
+-->Location: ([[https://www.google.co.uk/maps?q=St.+Louis+Union+Station+1820+Market+Street,+St.+Louis,+MO+63103&um=1&ie=UTF-8&sa=X&ved=0ahUKEwi-pPDb_s7eAhUPQhoKHXSjCXYQ_AUIDigB| ]])
+-->Date: June 09-13 2019
+-->URL: [[https://aas.org/meetings/aas234| AAS234]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''The Future of X-ray Timing:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Anton+Pannekoek+Instituut/@52.35446,4.9558906,15z/data=!4m2!3m1!1s0x0:0x3c92c63a380f2602?sa=X&ved=2ahUKEwib7ZSBhNvcAhVNyxoKHeztCnsQ_BIwCnoECAoQCw| Anton Pannekoek Institute Science Park 904 1098XH Amsterdam The Netherlands ]])
+-->Date: October 21-25 2019
+-->URL: [[http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/getMeetings.html?number=5702| XRAYTIMING]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''The Landscape of Space Astrophysics in the 2020s and Beyond:'''
+-->Location: ([[https://www.google.co.uk/maps/place/William+F.+Bolger+Center/@39.0217573,-77.1863227,15z/data=!4m7!3m6!1s0x0:0x3fb8fc44c5e6fcf1!5m1!1s2018-08-10!8m2!3d39.0217573!4d-77.1863227| William Bolger Center, Potomac, Maryland.  ]])
+-->Date: April 01-03 2019
+-->URL: [[http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/getMeetings.html?number=5738| LSA2020]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Preparing for 4MOST. A community workshop introducing ESO’s next-generation spectroscopic survey facility.:'''
+-->Location: ([[https://www.google.com/maps/place/Karl-Schwarzschild-Stra%C3%9Fe+2,+85748+Garching+bei+M%C3%BCnchen,+Germany/@48.262167,11.670073,4378m/data=!3m1!1e3!4m5!3m4!1s0x479e72eebc9ec4b7:0x7115eae230f34b99!8m2!3d48.2602503!4d11.6708788?hl=en | ]])
+-->Date: May 06-08 2019
+-->URL: [[http://www.eso.org/sci/meetings/2019/4MOST.html| 4MOST]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''The X-ray Universe 2020:'''
+-->Location: ([[https://www.google.co.uk/maps/place/European+Space+Research+and+Technology+Centre+ESTEC/@52.2193076,4.4177464,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5bf61958b3ecf:0xfcfa18db235351ad!8m2!3d52.2193043!4d4.4199351 | ]])
+-->Date: May 25-29 2020
+-->URL: [[http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/getMeetings.html?number=5802| X-ray 2020]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Cosmic Controversies:'''
+-->Location: ([[https://www.google.co.uk/maps/search/450+N+Cityfront+Plaza+Dr,+Chicago,+IL+60611| 450 N Cityfront Plaza Dr, Chicago, IL 60611]])
+-->Date: October 05-08 2019
+-->URL: [[https://kicp-workshops.uchicago.edu/2019-COSMIC/index.php| Controversies]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''The 29th annual international Astronomical Data Analysis Software & Systems Conference:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Martini+Plaza,+Groningen,+The+Netherlands| Martini Plaza, Groningen, The Netherlands]])
+-->Date: October 06-10 2019
+-->URL: [[https://www.adass2019.nl/ | ADASS2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Astronomical Data Archives:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Sydney,+Australia| Sydney, Australia]])
+-->Date: August 05-08 2019
+-->URL: [[| ]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Astro Hack Week 2019:'''
+-->Location: ([[https://www.google.co.uk/maps/search/Kavli+Institute+for+Cosmology,+Cambridge| Kavli Institute for Cosmology, Cambridge]])
+-->Date: August 26-30 2019
+-->URL: [[https://www.kicc.cam.ac.uk/events/astrohackweek19/ | AstroHack2019]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+
+'''Conferences not yet occurred but both Registration and Abstract Deadline has passed:'''
+
+*'''South American Workshop on Cosmology in the LSST Era:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Instituto+de+F%C3%ADsica+Te%C3%B3rica+-+IFT+-+Unesp+-+S%C3%A3o+Paulo/@-23.5242779,-46.6654425,15z/data=!4m5!3m4!1s0x0:0x296ade64ca042a15!8m2!3d-23.5242779!4d-46.6654425 | R. Dr. Bento Teobaldo Ferraz, 271 - Várzea da Barra Funda, São Paulo - SP, 01140-070, Brazil ]])
+-->Date: December 17-21 2018
+-->URL: [[http://www.ictp-saifr.org/south-american-workshop-on-cosmology-in-the-lsst-era/| IFT-UNESP]]
+-->Abstract Deadline: 19/10/18
+-->Registration Deadline: 01/12/18
+-->XCS Members Attending: 
+
+
+'''The archive of past conferences:'''
+
+*'''WE-Heraeus-Symposium The Hubble constant controversy:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Auditorium+Friedrichstra%C3%9Fe/@52.512875,13.3870354,17z/data=!3m1!4b1!4m5!3m4!1s0x47a851da98735a0b:0xdcb0a2d4b4a00c16!8m2!3d52.512875!4d13.3892241 | Auditorium Friedrichstrasse, Berlin, Germany ]])
+-->Date: November 10-10 2018
+-->URL: [[https://www.we-heraeus-stiftung.de/veranstaltungen/tagungen/2018/hubble2018/| WE-Heraeus-Symposium]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''X-ray Skies with High-Res Eyes:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Carnegie+Institution+for+Science/@38.9093719,-77.0380435,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7b7c1ae062b33:0xcc19325db48f5a93!8m2!3d38.9093719!4d-77.0358548| The Carnegie Institute of Washington, 1530 P Street NW, Washington, DC]])
+-->Date: August 06-07 2018
+-->URL: [[http://axis.astro.umd.edu/workshop2018.html| AXIS 2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 20/07/18
+-->XCS Members Attending: 
+
+*'''Exploring the Universe Near Earth Space Science to Extra-Galactic Astronomy:'''
+-->Location: ([[https://www.google.co.uk/maps/place/S.N.+Bose+National+Centre+For+Basic+Sciences/@22.568576,88.4162608,15z/data=!4m2!3m1!1s0x0:0x6f54ed6dfa698788?sa=X&ved=2ahUKEwiVtMu_8NrcAhULzIUKHSZ4AuoQ_BIwCnoECAoQCw | S N Bose National Centre for Basic Sciences, Kolkata, India ]])
+-->Date: November 14-17 2018
+-->URL: [[http://newweb.bose.res.in/Conferences/EXPUNIV2018/| EXPUNIV2018]]
+-->Abstract Deadline: 31/08/18
+-->Registration Deadline: 21/08/18
+-->XCS Members Attending: 
+
+*'''The 8th KIAS workshop Cosmology and Structure Formation:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Korea+Institute+for+Advanced+Study+(KIAS)/@37.5921588,127.0474639,15z/data=!4m5!3m4!1s0x0:0x1cb759b67eb4aac2!8m2!3d37.5921588!4d127.0474639 | 85 Hoegi-ro, Cheongnyangri-dong, Dongdaemun-gu, Seoul, South Korea ]])
+-->Date: November 04-09 2018
+-->URL: [[http://home.kias.re.kr/cosmology2018/| KIAS2018]]
+-->Abstract Deadline: 26/08/18
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''SNOWPAC 2018:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Snowbird+Ski+Area/@40.5956294,-111.7225395,13z/data=!4m8!1m2!2m1!1sSnowbird+Ski+%26+Summer+Resort!3m4!1s0x875270b833323253:0x8026ddfbfb0dc21b!8m2!3d40.5804508!4d-111.6553065| Snowbird Ski Resort and Spa, 9600 Little Cottonwood Canyon Road, Snowbird, Utah, USA ]])
+-->Date: March 11-16 2018
+-->URL: [[http://www.physics.utah.edu/snowpac/| SNOWPAC2018]]
+-->Abstract Deadline: 17/01/18
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''APS April Meeting:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Greater+Columbus+Convention+Center/@39.9722309,-83.0035158,17z/data=!3m2!4b1!5s0x88388f291dbc0a3b:0x7edf0a3a6b3bc0e0!4m5!3m4!1s0x88388f2900662273:0x9a213d4bb36c71ee!8m2!3d39.9722309!4d-83.0013271| Greater Columbus Convention Center, 400 N High St, Columbus, OH 43215, USA ]])
+-->Date: April 14-17 2018
+-->URL: [[https://www.aps.org/meetings/april/about.cfm| APS2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 15/03/18
+-->XCS Members Attending: 
+
+*'''Rencontres de Moriond:'''
+-->Location: ([[https://www.google.co.uk/maps/place/11016+La+Thuile,+Aosta+Valley,+Italy/@45.696715,6.8484594,12z/data=!3m1!4b1!4m5!3m4!1s0x478940698050685d:0x937c0b4ec82ab3f9!8m2!3d45.7046639!4d6.9108134| La Thuile, Aosta Valley, Italy ]])
+-->Date: March 17-24 2018
+-->URL: [[http://moriond.in2p3.fr/cosmo/2018/index.php| Rencontres de Moriond]]
+-->Abstract Deadline: 
+-->Registration Deadline: 31/01/18
+-->XCS Members Attending: 
+
+*'''From Dark Energy to Bright Synergies:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Deutschsprachige+Grundschule+Sexten/@46.7237283,12.2532386,12z/data=!4m8!1m2!2m1!1ssexten+primary+school!3m4!1s0x4779d387924394bd:0xe48949d5c0a5ed56!8m2!3d46.7005526!4d12.3530521 | Sexten Primary School - Via Panorama 6, Sexten ]])
+-->Date: July 23-27 2018
+-->URL: [[http://www.sexten-cfa.eu/it/conferenze/2018/details/107-from-dark-energy-to-bright-synergies.html| Sexten]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Cosmology on Small Scales:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Institute+of+Mathematics+of+the+Czech+Academy+of+Sciences/@50.0775517,14.4233489,17z/data=!3m1!4b1!4m5!3m4!1s0x470b948cd4166db1:0x78bb36614cb5410!8m2!3d50.0775517!4d14.4255376 | Institute of Mathematics, Czech Academy of Sciences,Zitna 25, Prague, Czech Republic ]])
+-->Date: September 26-29 2018
+-->URL: [[http://css2018.math.cas.cz/| Css2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''DECam Community Science Workshop 2018:'''
+-->Location: ([[| Unkown - Tuscon Arizona US]])
+-->Date: May 21-22 2018
+-->URL: [[https://www.noao.edu/meetings/decam2018/| DECam 2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Cosmology in the era of large surveys:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Facultad+de+Ciencias+Astron%C3%B3micas+y+Geof%C3%ADsicas/@-34.9083644,-57.9353741,17z/data=!3m1!4b1!4m5!3m4!1s0x95a2e613f7dc4553:0x9ae80df938607a2e!8m2!3d-34.9083644!4d-57.9331854| Paseo del Bosque s/n, B1900FWA La Plata, Buenos Aires, Argentina ]])
+-->Date: April 23-27 2018
+-->URL: [[http://lapis2018.fcaglp.unlp.edu.ar/venue.html| Cosmology in the era of larger surveys]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''DES Collaboration Meeting 2018:'''
+-->Location: ([[https://www.google.com/maps?daddr=30.619141,-96.343479&hl=en&sll=30.619857,-96.343845&sspn=0.009002,0.016512&t=h&mra=ls&z=17| The George P. and Cynthia Woods Mitchell Institute for Fundamental Physics and Astronomy,Texas, USA ]])
+-->Date: May 14-18 2018
+-->URL: [[http://instrumentation.tamu.edu/des2018/| DES2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 15/04/18
+-->XCS Members Attending: 
+
+*'''Dark Matter 2018:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Hotel+Santemar/@43.4701506,-3.7851002,17z/data=!3m1!4b1!4m5!3m4!1s0xd494b0841e5ba4d:0x15a709340a0ac72d!8m2!3d43.4701467!4d-3.7829115| Hotel Santemar, Calle Joaquín Costa, 28, 39005 Santander ]])
+-->Date: May 29-June 08 2018
+-->URL: [[https://indico.ifca.es/event/585/overview| DARKMATTER2018]]
+-->Abstract Deadline: 30/04/18
+-->Registration Deadline: 15/05/18
+-->XCS Members Attending: 
+
+*'''Astrostatistics Workshops:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Penn+State+University/@40.800968,-77.8681831,15.25z/data=!4m5!3m4!1s0x89cea6247f5d0291:0xad3e8e9b56e48269!8m2!3d40.7982133!4d-77.8599084| Penn State University, Old Main, State College, PA 16801, USA ]])
+-->Date: May 29-June 08 2018
+-->URL: [[http://astrostatistics.psu.edu/su18/| ASTROSTAT]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''THE SECOND INFORMATION UNIVERSE CONFERENCE:'''
+-->Location: ([[https://www.google.com/maps/place/DOT+Groningen/@53.225197,6.5655657,17z/data=!3m1!4b1!4m5!3m4!1s0x47c9cd5b9e973ee5:0x819874806201432c!8m2!3d53.2251938!4d6.5677544?hl=en-GB | DOT, Groninen ]])
+-->Date: July 03-06 2018
+-->URL: [[http://www.informationuniverse.rug.nl/index.html| DOTA2018]]
+-->Abstract Deadline: 15/04/18
+-->Registration Deadline: 27/06/18
+-->XCS Members Attending: 
+
+*'''Exploring the Hot and Energetic Universe:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Teatro+Santa+Cecilia/@38.1142213,13.3656072,15z/data=!4m5!3m4!1s0x0:0x8ac61f949a1ee095!8m2!3d38.1142213!4d13.3656072 | Real Teatro Santa Cecilia, Piazza Teatro Santa Cecilia, 1 – CAP 90133 Palermo Italy ]])
+-->Date: September 24-27 2018
+-->URL: [[http://www.astropa.inaf.it/athena18/| ATHENA2018]]
+-->Abstract Deadline: 23/02/18
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''AMUSE Workshop:'''
+-->Location: ([[https://www.google.com/maps?ll=52.168829,4.458143&z=17&t=m&hl=en-GB&gl=NL&mapclient=embed&q=Niels+Bohrweg+2+2333+CA+Leiden | Leiden University ]])
+-->Date: April 03-06 2018
+-->URL: [[http://home.strw.leidenuniv.nl/~spz/act/2018/AMUSE_Workshop/webpage/| AMUSE]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''COSPAR 2018:'''
+-->Location: ([[https://www.google.co.uk/maps/uv?hl=en&pb=!1s0x80c2c36580edc00d:0x14e659e3b16ec7b6!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps://picasaweb.google.com/lh/sredir?uname%3D107508828524445501087%26id%3D6321620534631331138%26target%3DPHOTO!5sPasadena+Convention+Center+-+Google+Search&imagekey=!1e3!2s-lADRLrsCFDQ/V7roYgOD9UI/AAAAAAAAAEM/dy5rttSQmnsnTGtL1i7PooECtSvgDY9lwCLIBGAYYCw&sa=X&ved=0ahUKEwjWuvvjmo_ZAhXJAMAKHScADUIQoioIejAM| 300 E Green St, Pasadena, CA 91101, United States ]])
+-->Date: July 14-22 2018
+-->URL: [[http://cospar2018.org/registration-accommodation-travel/registration/| COSPAR2018]]
+-->Abstract Deadline: 09/02/18
+-->Registration Deadline: 15/06/18
+-->XCS Members Attending: 
+
+*'''Treasures Hidden in High Energy Catalogues:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Research+Institute+En+Astrophysique+Et+En+Plan%C3%A9tologie/@43.5625154,1.4760586,15z/data=!4m2!3m1!1s0x0:0x75d6eeefea4e5f1b?sa=X&ved=0ahUKEwibjvbC8ITZAhWrDcAKHSmRCeQQ_BIIfjAN| IRAP, Toulouse, France ]])
+-->Date: May 22-24 2018
+-->URL: [[https://catalogue-gems.sciencesconf.org/| HIDDEN TREASURES]]
+-->Abstract Deadline: 31/03/18
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Astro Hack Week:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Lorentz+Center/@52.168794,4.457979,15z/data=!4m2!3m1!1s0x0:0xece174831b80c8df?sa=X&ved=0ahUKEwjYxYj18ITZAhWkAcAKHUVUAxMQ_BIIhAEwCg| Lorentz Center@oort, Leiden, The Netherlands ]])
+-->Date: August 06-10 2018
+-->URL: [[http://astrohackweek.org/2018/| ASTROHACK2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''The Current and Future Observering Facilities:'''
+-->Location: ([[| Italy (Various Locations)]])
+-->Date: September 02-07 2018
+-->URL: [[https://ease2018school.wordpress.com/| EASE2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 31/03/18
+-->XCS Members Attending: 
+
+*'''Analytics, Inference and Computation in Cosmology:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Institute+of+Scientific+Studies/@42.134794,8.6068703,17z/data=!3m1!4b1!4m5!3m4!1s0x12da7bceca37af77:0xc3a8f34b39c63765!8m2!3d42.134794!4d8.609059| Institut d'Étude Scientifique de Cargèse  ]])
+-->Date: September 03-14 2018
+-->URL: [[http://www.ihp.fr/en/CEB/T3-2018| IHP2018]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''Meeting on Fundamental Cosmology:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Carmen+de+la+Victoria/@37.1808104,-3.5908582,17z/data=!3m1!4b1!4m5!3m4!1s0xd71fcc9b27a8adf:0xef1207c73e2dc726!8m2!3d37.1808104!4d-3.5886695 | Carmen De La Victoria, Grenade, Spain ]])
+-->Date: May 28-30 2018
+-->URL: [[https://cafpe.ugr.es/fcosmology18/| CAFPE]]
+-->Abstract Deadline: 04/05/18
+-->Registration Deadline: 04/05/18
+-->XCS Members Attending: 
+
+*'''Alpine Cosmology Workshop 2018:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Rifugio+Valle+Vogna+1381+m./@45.8037778,7.9006496,15z/data=!4m8!1m2!2m1!1sval+vogna!3m4!1s0x4788a9037471856b:0x69881fa7b44b529f!8m2!3d45.814653!4d7.930542 | Val Vogna, Aosta Valley, Italy ]])
+-->Date: July 16-20 2018
+-->URL: [[https://wiki.helsinki.fi/display/alpine/cosmology| name]]
+-->Abstract Deadline: 20/05/18
+-->Registration Deadline: 20/05/18
+-->XCS Members Attending: 
+
+*'''Introduction to Cosmology:'''
+-->Location: ([[https://www.google.com/maps/place/%C5%81ojasiewicza+11,+30-348+Krak%C3%B3w/@50.02973,19.904756,12z/data=!4m5!3m4!1s0x47165c8895f55b01:0x574a215bd71ee69d!8m2!3d50.029106!4d19.9041029?hl=en-GB | Łojasiewicza 11 30-348 Kraków ]])
+-->Date: July 08-22 2018
+-->URL: [[http://cosmoschool2018.oa.uj.edu.pl/| COSMOSCHOOL2018]]
+-->Abstract Deadline: 30/04/18
+-->Registration Deadline: 15/06/18
+-->XCS Members Attending: 
+
+*'''Fourth Workshop on Numerical and Observational Astrophysics:'''
+-->Location: ([[https://www.google.com/maps?ll=-34.544736,-58.440716&z=17&t=m&hl=en-GB&gl=CL&mapclient=embed&cid=14686286576303267003 | Instituto de Astronomía y Física del Espacio, Buenos Aires, Argentina ]])
+-->Date: November 12-16 2018
+-->URL: [[https://iafe-astronum.github.io/4WNOA/| 4WNOA]]
+-->Abstract Deadline: 
+-->Registration Deadline: 
+-->XCS Members Attending: 
+
+*'''XXX Canary Islands Winter School of Astrophysics:'''
+-->Location: ([[https://www.google.co.uk/maps/place/San+Crist%C3%B3bal+de+La+Laguna,+Santa+Cruz+de+Tenerife,+Spain/@28.4697925,-16.3433747,13z/data=!3m1!4b1!4m5!3m4!1s0xc41cdeccdcfeaf5:0x54a9fe4642667870!8m2!3d28.4874009!4d-16.3159061 | San Cristobal de La Laguna, Santa Cruz de Tenerife, Spain ]])
+-->Date: November 04-10 2018
+-->URL: [[http://www.iac.es/winterschool/2018/| XXX_DATA]]
+-->Abstract Deadline: 17/06/18
+-->Registration Deadline: 17/06/18
+-->XCS Members Attending: 
+
+*'''ICHEP 2018:'''
+-->Location: ([[https://www.google.co.uk/maps/place/4-10+Samseong-dong,+Gangnam-gu,+Seoul,+South+Korea/@37.5176425,127.0286313,14z/data=!3m1!4b1!4m5!3m4!1s0x357ca473edeb3e39:0x4d4e456a85eb2c0c!8m2!3d37.5176103!4d127.0461408 | Gangnam-gu, Samsung-dong 410, Seoul 135-731, Korea ]])
+-->Date: July 04-11 2018
+-->URL: [[https://indico.cern.ch/event/686555/overview| ICHEP2018]]
+-->Abstract Deadline: 21/03/18
+-->Registration Deadline: 31/05/18
+-->XCS Members Attending: 
+
+*'''Dark Side of the Universe:'''
+-->Location: ([[https://www.google.co.uk/maps/place/LAPTh+-+Laboratoire+d'Annecy-le-Vieux+de+Physique+Th%C3%A9orique/@45.9212441,6.1572187,17z/data=!3m1!4b1!4m5!3m4!1s0x478b8fafa2ec37f5:0xa47e758e0c3a4d4c!8m2!3d45.9212404!4d6.1594074 | 9 Chemin de Bellevue, 74940 Annecy, France ]])
+-->Date: June 25-29 2018
+-->URL: [[https://indico.in2p3.fr/event/14719/overview| DSU2018]]
+-->Abstract Deadline: 15/04/18
+-->Registration Deadline: 30/04/18
+-->XCS Members Attending: 
+
+*'''Halo Substructure and Dark Matter Searches:'''
+-->Location: ([[https://www.google.com/maps/place/Autonomous+University+of+Madrid/@40.546992,-3.693949,15z/data=!4m5!3m4!1s0x0:0x8586e92e648f8b2d!8m2!3d40.5466983!4d-3.6943619?hl=en-GB | Ciudad Universitaria de Cantoblanco, 28049 Madrid, Spain ]])
+-->Date: June 27-29 2018
+-->URL: [[https://eventos.uam.es/16257/detail/halo-substructure-and-dark-matter-searches.html| HSDMS2018]]
+-->Abstract Deadline: 30/04/18
+-->Registration Deadline: 30/04/18
+-->XCS Members Attending: 
+
+*'''CIPANP 2018:'''
+-->Location: ([[https://www.google.co.uk/maps/place/Hyatt+Regency+Indian+Wells+Resort+%26+Spa/@33.7236304,-116.3344429,17z/data=!3m1!4b1!4m7!3m6!1s0x80dafeb6aed6425d:0xc02235a2ebfe5940!5m1!1s2018-05-03!8m2!3d33.7236304!4d-116.3322542 | 44600 Indian Wells Ln, Indian Wells, CA 92210, USA]])
+-->Date: May 29-June 03 2018
+-->URL: [[http://cipanp18.berkeley.edu/|  CIPANP2018]]
+-->Abstract Deadline: 20/04/18
+-->Registration Deadline: 20/05/18
+-->XCS Members Attending: 
+
+*'''New eyes on X-ray astrophysical objects with Japanese and Chinese observatories:'''
+-->Location: ([[https://www.google.co.uk/maps/search/3-1-1+Yoshino-dai,+Chuo-ku,+Sagamihara,+Kanagawa+252-5210,+Japan/@35.5583454,139.393189,17z/data=!3m1!4b1 | ]])
+-->Date: November 19-21 2018
+-->URL: [[https://indico2.riken.jp/event/2832/| JAXA ISAS]]
+-->Abstract Deadline: 31/10/18
+-->Registration Deadline: 31/10/18
+-->XCS Members Attending: 
+
