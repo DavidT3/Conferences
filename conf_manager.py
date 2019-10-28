@@ -3,6 +3,13 @@ import collections
 import sys
 import glob
 from datetime import datetime
+from string import ascii_lowercase as alphabet
+
+des_working_groups = ["Clusters", "Galaxy Evolution (and AGN)", "Large-Scale Structure", "Milky Way", "Photo-z",
+                      "Simulation", "Lensing", "Supernovae", "Theory", "Transients", "Gravitational Waves"]
+allowed_keywords = ["Astronomy", "Astrophysics", "Cosmology", "School", "Workshop"]
+section_order = {"General Astronomy/Astrophysics": ["Astrophysics", "Astronomy"], "General Cosmology": ["Cosmology"],
+                 "Working Group Specific": des_working_groups, "Schools and Workshops": ["School", "Workshop"]}
 
 
 def init_db(db_name):
@@ -17,166 +24,109 @@ def init_db(db_name):
     return conf_db
 
 
-def read_legacy_conf(db):
-    def parse_name(int_dict, first_line):
-        nam = first_line.split("'''")[1].split(':')[0]
-        if nam[0] == ' ':
-            nam = nam[1:len(nam)]
-        if nam[-1] == ' ':
-            nam = nam[0:len(nam)-1]
-
-        int_dict['Name'] = nam
-        return int_dict
-
-    def parse_loc(int_dict, f_name, data):
-        unpacked = data.split('[[')
-        if '[[' in data:
-            place = unpacked[0]
-            if place[0] == ' ':
-                place = place[1:]
-            if place == '(':
-                place = ''
-            if '(' in place:
-                place = place.split('(')[0]
-
-            gmaps = unpacked[1].split('|')[0]
-            if gmaps[0] == ' ':
-                gmaps = gmaps[1:]
-        else:
-            place = unpacked[0]
-            gmaps = ''
-        int_dict['Place Name'] = place
-        int_dict['Gmaps URL'] = gmaps
-        return int_dict
-
-    def parse_url(int_dict, f_name, data):
-        unpacked = data.split('|')
-        url = unpacked[0].split('[[')[1]
-        label = unpacked[1].split(']]')[0]
-        if url[0] == ' ':
-            url = url[1:]
-        if url[-1] == ' ':
-            url = url[:-1]
-        if label[0] == ' ':
-            label = label[1:]
-        if label[-1] == ' ':
-            label = label[:-1]
-        int_dict['URL Label'] = label
-        int_dict['URL'] = url
-        return int_dict
-
-    def parse_conf_date(int_dict, f_name, data):
-        months = ['Jan', 'January', 'Feb', 'February', 'Mar', 'March', 'Apr', 'April', 'May', 'Jun', 'June', 'Jul',
-                  'July', 'Aug', 'August', 'Sep', 'September', 'Oct', 'October', 'Nov', 'November', 'Dec', 'December']
-        print(data)
-        if f_name == 'Date':
-            start = input('What is the start date (dd/mm/yy): ')
-            end = input('What is the end date (dd/mm/yy): ')
-            int_dict['Start Date'] = start
-            int_dict['End Date'] = end
-        elif f_name == 'Abstract Deadline' or f_name == 'Registration Deadline':
-            print(f_name)
-            date = input('What is the date: ')
-            int_dict[f_name] = date
-            print('')
-        return int_dict
-
-    def parse_general(a_line):
-        line = a_line.split('-->')[1]
-        field_name = line.split(':')[0]
-        line_no_name = ':'.join(line.split(':')[1:])
-        if len(line_no_name) != 0 and line_no_name[0] == ' ':
-            line_no_name = line_no_name[1:]
-        if len(field_name) != 0 and field_name[0] == ' ':
-            field_name = line_no_name[1:]
-        if len(field_name) != 0 and field_name[-1] == ' ':
-            field_name = field_name[:-1]
-        return field_name, line_no_name
-
-    table = db['LegacyConferences']
-    confs_present = []
-    for doc in table.find():
-        confs_present.append(doc['Name'])
-
-    for file in glob.glob('legacy_conferences/added_*.txt'):
-        with open(file, 'r') as added:
-            lines = added.read()
-        added.close()
-        confs = [el.split('\n') for el in lines.split('\n\n')]
-        for conf in confs:
-            internal_dict = collections.OrderedDict()
-            internal_dict = parse_name(internal_dict, conf[0])
-            if internal_dict['Name'] not in confs_present:
-                for i in range(1, len(conf)):
-                    fld_name, raw_data = parse_general(conf[i])
-                    if fld_name == "Location":
-                        internal_dict = parse_loc(internal_dict, fld_name, raw_data)
-                    if fld_name == "Date":
-                        internal_dict = parse_conf_date(internal_dict, fld_name, raw_data)
-                    if fld_name == "URL":
-                        internal_dict = parse_url(internal_dict, fld_name, raw_data)
-                    if fld_name == "Abstract Deadline":
-                        internal_dict = parse_conf_date(internal_dict, fld_name, raw_data)
-                    if fld_name == "Registration Deadline":
-                        internal_dict = parse_conf_date(internal_dict, fld_name, raw_data)
-                if "Abstract Deadline" not in internal_dict:
-                    internal_dict["Abstract Deadline"] = ''
-                if "Registration Deadline" not in internal_dict:
-                    internal_dict["Registration Deadline"] = ''
-                internal_dict['XCS Attending'] = ''
-                internal_dict['Date Added'] = '01/01/18'
-                for el in internal_dict:
-                    print(el + ':', internal_dict[el])
-                cont = input('Save this entry(y/n)?')
-                if cont == 'y':
-                    table.insert_one(internal_dict)
-                elif cont == 'n':
-                    print('fuck you')
-                print('')
-
-
 def add_conferences(db, table_name):
     def derive_gmap_url(place_name):
         unpacked = place_name.split(' ')
         loc_str = '+'.join(unpacked)
         return "https://www.google.co.uk/maps/search/{name}".format(name=loc_str)
 
-    cur_date = datetime.now().date()
-    conf_table = db[table_name]
-    required_fields = ['Name', 'Place Name', 'Gmaps URL', 'Start Date', 'End Date', 'URL Label', 'URL',
-                       'Abstract Deadline', 'Registration Deadline', 'XCS Attending', 'Date Added']
-    auto_fields = ['Gmaps URL', 'Date Added']
-    create_entry = True
-    while create_entry:
+    def new_entry(create_entry):
         print('New Conference Entry')
         internal_dict = collections.OrderedDict()
-        for i in range(len(required_fields)):
-            if required_fields[i] not in auto_fields:
-                internal_dict[required_fields[i]] = input(required_fields[i] + ': ')
-            elif required_fields[i] in auto_fields:
-                internal_dict['Gmaps URL'] = derive_gmap_url(internal_dict['Place Name'])
-                internal_dict['Date Added'] = cur_date.strftime("%d/%m/%y")
+        internal_dict["Name"] = input("Name" + ': ')
+        if internal_dict["Name"] not in conference_names:
+            for field in required_fields:
+                if field not in auto_fields and field not in fields_with_options.keys():
+                    internal_dict[field] = input(field + ': ')
+                elif field in auto_fields:
+                    internal_dict['Gmaps URL'] = derive_gmap_url(internal_dict['Place Name'])
+                    internal_dict['Date Added'] = cur_date.strftime("%d/%m/%y")
+                elif field in fields_with_options.keys():
+                    print('')
+                    for ind, option in enumerate(fields_with_options[field]):
+                        print('\x1b[0;30;41m {ind}) {choice} \x1b[0m'.format(ind=ind, choice=option))
+                    selections = input("Select {} option(s) (using numbers separated by commas): ".format(field))
 
-        more_fields = str(input('Add more fields(y/n): ')).lower()
-        while more_fields == 'y':
-            field_name = str(input('Field name: '))
-            field_data = input('Field value: ')
-            internal_dict[field_name] = field_data
+                    try:
+                        selections = [int(elem.strip(" ")) for elem in selections.split(",")]
+                    except ValueError:
+                        print("You must select at least one option!\n")
+                        return
+
+                    try:
+                        internal_dict[field] = list(map(lambda x: fields_with_options[field][x], selections))
+                    except IndexError:
+                        print("Invalid selection, try again!\n")
+                        return
+            try:
+                start = datetime.strptime(internal_dict["Start Date"], "%d/%m/%y")
+                end = datetime.strptime(internal_dict["End Date"], "%d/%m/%y")
+                if internal_dict["Abstract Deadline"] != "":
+                    datetime.strptime(internal_dict["Abstract Deadline"], "%d/%m/%y")
+                if internal_dict["Registration Deadline"] != "":
+                    datetime.strptime(internal_dict["Registration Deadline"], "%d/%m/%y")
+            except ValueError:
+                print("One of the dates you entered is in the wrong format! Use dd/mm/yy (e.g. 25/12/19)!\n")
+                return
+
+            if start > end:
+                print("Conferences cannot end before they begin!\n")
+                return
+            elif start.date() < cur_date:
+                print("Conferences cannot start before the current date!\n")
+                return
+
+
             more_fields = str(input('Add more fields(y/n): ')).lower()
+            while more_fields == 'y':
+                field_name = str(input('Field name: '))
+                field_data = input('Field value: ')
+                internal_dict[field_name] = field_data
+                more_fields = str(input('Add more fields(y/n): ')).lower()
 
-        submit = str(input('Save this entry(y/n): '))
-        if submit.lower() == 'y':
-            conf_table.insert_one(internal_dict)
-        elif submit.lower() == 'n':
-            print('Entry Discarded')
-        print('')
-        more_entries = str(input('Add another record(y/n): ')).lower()
-        print('')
-        if more_entries == 'n':
-            create_entry = False
-        elif more_entries != 'y':
-            print('YOU FUCKED UP')
-            sys.exit(0)
+            submit = str(input('Save this entry(y/n): '))
+            if submit.lower() == 'y':
+                conf_table.insert_one(internal_dict)
+            elif submit.lower() == 'n':
+                print('Entry Discarded')
+            print('')
+            more_entries = str(input('Add another record(y/n): ')).lower()
+            print('')
+            if more_entries == 'n':
+                create_entry = False
+            elif more_entries != 'y':
+                print('YOU FUCKED UP')
+                sys.exit(0)
+        else:
+            print('\nTHIS CONFERENCE NAME ALREADY EXISTS, PLEASE TRY AGAIN!\n')
+        return create_entry
+
+    cur_date = datetime.now().date()
+    conf_table = db[table_name]
+    conference_names = [record['Name'] for record in conf_table.find()]
+    required_fields = ['Place Name', "Working Group(s)", "Keyword(s)", 'Gmaps URL', 'Start Date', 'End Date',
+                       'URL Label', 'URL', 'Abstract Deadline', 'Registration Deadline', 'XCS Attending', 'Date Added']
+    auto_fields = ['Gmaps URL', 'Date Added']
+    fields_with_options = {"Working Group(s)": des_working_groups, "Keyword(s)": allowed_keywords}
+
+    create_entry_flag = True
+    while create_entry_flag:
+        create_entry_flag = new_entry(create_entry_flag)
+        if create_entry_flag is None:
+            create_entry_flag = True
+
+
+def move_past_conferences(db, from_table, to_table):
+    cur_date = datetime.now().date()
+    happened = [entry for entry in db[from_table].find()
+                if (datetime.strptime(entry['Start Date'], "%d/%m/%y").date() - cur_date).days < 0]
+    if len(happened) > 0:
+        db[to_table].bulk_write([pymongo.InsertOne(entry) for entry in happened])
+        in_to_table = list(filter(None, [db[to_table].find_one(entry) for entry in happened]))
+        db[from_table].bulk_write([pymongo.DeleteOne(entry) for entry in in_to_table])
+
+        if in_to_table != happened:
+            print("For some reason some documents have not been moved to the past conferences table!")
 
 
 def generate_out_file(db, table_names):
@@ -190,12 +140,12 @@ def generate_out_file(db, table_names):
                        "-->Registration Deadline: {REGDEAD}\n"\
                        "-->XCS Members Attending: {members}\n"
         elif group == 'des':
-            template = "*'''{Name}:'''\n" \
-                       "-->Location: ([[{GmapsURL}| {PlaceName}]])\n" \
-                       "-->Date: {FormattedDate}\n" \
-                       "-->URL: [[{URL}| {URLLabel}]]\n" \
-                       "-->Abstract Deadline: {ABDEAD}\n" \
-                       "-->Registration Deadline: {REGDEAD}\n"
+            template = "* *{Name}:*\n" \
+                       "** Location: \"{PlaceName}\":{GmapsURL}\n" \
+                       "** Date: {FormattedDate}\n" \
+                       "** URL: \"{URLLabel}\":{URL}\n" \
+                       "** Abstract Deadline: {ABDEAD}\n" \
+                       "** Registration Deadline: {REGDEAD}\n"
 
         if record['Start Date'].month != record['End Date'].month:
             formatted_date = record['Start Date'].strftime("%B") + ' ' + record['Start Date'].strftime('%d') + '-' \
@@ -217,12 +167,13 @@ def generate_out_file(db, table_names):
 
         expec = ['_id', 'Name', 'Gmaps URL', 'Place Name', 'URL', 'URL Label', 'Abstract Deadline',
                  'Registration Deadline', 'Start Date', 'End Date', 'XCS Attending', 'Date Added']
+        no_print = ["Working Group(s)"]
         if group == 'xcs':
             entry = template.format(Name=record['Name'], GmapsURL=record['Gmaps URL'], PlaceName=record['Place Name'],
                                     FormattedDate=formatted_date, URL=record['URL'], URLLabel=record['URL Label'],
                                     ABDEAD=form_abs, REGDEAD=form_reg, members=record['XCS Attending'])
             for rec in record:
-                if rec not in expec:
+                if rec not in expec and rec not in no_print:
                     entry += "-->{fieldname}: {content}\n".format(fieldname=rec, content=record[rec])
             return entry
 
@@ -231,8 +182,8 @@ def generate_out_file(db, table_names):
                                     FormattedDate=formatted_date, URL=record['URL'], URLLabel=record['URL Label'],
                                     ABDEAD=form_abs, REGDEAD=form_reg)
             for rec in record:
-                if rec not in expec:
-                    entry += "-->{fieldname}: {content}\n".format(fieldname=rec, content=record[rec])
+                if rec not in expec and rec not in no_print:
+                    entry += "** {fieldname}: {content}\n".format(fieldname=rec, content=record[rec])
             return entry
 
     def this_month(confs):
@@ -410,6 +361,30 @@ def generate_out_file(db, table_names):
 
         return past_string
 
+    def new_des_layout(confs):
+        des_string = "h1. Conference List - Generated on {d}\n\n" \
+                     "Please email me at david.turner@sussex.ac.uk " \
+                     "if you spot any problems with this page. \n\n".format(d=cur_date.strftime("%d %B %Y"))
+        des_string += "{{toc}}\n\n"
+        header_string = "h{j}. {i}. {n}\n\n"
+        for ind, section in enumerate(section_order):
+            substring = header_string.format(j=2, i=ind+1, n=section)
+            if section != "Working Group Specific":
+                for entry in section_order[section]:
+                    for conf in confs:
+                        if entry in conf["Keyword(s)"]:
+                            substring += format_entry(conf) + "\n"
+            else:
+                for sub_ind, wg in enumerate(section_order[section]):
+                    sub_substring = header_string.format(j=3, i=str(ind+1)+alphabet[sub_ind], n=wg)
+                    for conf in confs:
+                        if wg in conf["Working Group(s)"]:
+                            sub_substring += format_entry(conf) + "\n"
+                    substring += sub_substring + "\n"
+            des_string += substring
+
+        return des_string
+
     def gather_sections(confs):
         if group == 'xcs':
             init_string = "'''Conference announcements'''\n" \
@@ -424,18 +399,16 @@ def generate_out_file(db, table_names):
                           "'''If you are attending any of these conferences, or spot an issue with this page, EMAIL ME at david.turner@sussex.ac.uk'''\n\n" \
                           "-----\n\n"
             dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), reg_open(confs), no_ab_reg(confs),
-                        ab_reg_clsd_future_(confs), past(confs)]
+                        ab_reg_clsd_future_(confs)]
             dat_string = init_string + '\n'.join(dat_list)
 
         elif group == 'des':
-            init_string = "Please email me at david.turner@sussex.ac.uk if you spot any problems with this page. \n\n"
-            dat_list = [this_month(confs), closing_soon(confs), ab_reg_open(confs), reg_open(confs), no_ab_reg(confs),
-                        ab_reg_clsd_future_(confs)]
-            dat_string = init_string + '\n'.join(dat_list)
+            dat_string = new_des_layout(confs)
         return dat_string
 
     cur_date = datetime.now().date()
-    all_conf = []
+    xcs_conf_list = []
+    des_conf_list = []
     for tab in table_names:
         conf_table = db[tab]
         result = conf_table.find()
@@ -449,51 +422,51 @@ def generate_out_file(db, table_names):
 
             if record['Registration Deadline'] and record['Registration Deadline'] != 'TBA':
                 record['Registration Deadline'] = datetime.strptime(record['Registration Deadline'], "%d/%m/%y").date()
-            all_conf.append(record)
+
+            record["Keyword(s)"] = ", ".join(record["Keyword(s)"])
+            des_conf_list.append(record)
+            if "Clusters" in record["Working Group(s)"]:
+                xcs_conf_list.append(record)
 
     with open('generated_lists/xcs_conference_list_{date}.txt'.format(date=cur_date.strftime('%d%m%y')), 'w') as xcs_conf:
         group = 'xcs'
-        xcs_conf.writelines(gather_sections(all_conf))
+        xcs_conf.writelines(gather_sections(xcs_conf_list))
     xcs_conf.close()
 
     with open('generated_lists/des_conference_list_{date}.txt'.format(date=cur_date.strftime('%d%m%y')), 'w') as des_conf:
         group = 'des'
-        des_conf.writelines(gather_sections(all_conf))
+        des_conf.writelines(gather_sections(des_conf_list))
     des_conf.close()
 
-    write_des_out(cur_date)
 
+def update_existing(db, table_name, conf_name=None):
+    if conf_name is None:
+        docs = db[table_name].find()
+    else:
+        docs = [db[table_name].find_one({"Name": conf_name})]
 
-def write_des_out(cur_date):
-    with open('generated_lists/des_conference_list_{date}.txt'.format(date=cur_date.strftime('%d%m%y'))) as afile:
-        contents = afile.readlines()
-    afile.close()
+    for doc in docs:
+        new_doc = doc.copy()
+        for el in new_doc:
+            if el != "_id":
+                print(el, new_doc[el])
+        print('')
 
-    def xcs_to_des(oneline):
-        if oneline.find("[[") != -1:
-            start = oneline.find("[[")
-            end = oneline.find("]]")
-            middle = oneline.find('|')
-            new_line = oneline[0:start].replace("(", "") + " \"" + oneline[middle + 1:end] + "\":" + \
-                       oneline[start + 2:middle].replace(" ", "") + "\n"
-            oneline = new_line
-        oneline = oneline.replace("*", '* ')
-        oneline = oneline.replace("-->", "** ")
-        oneline = oneline.replace("''' ", '*')
-        oneline = oneline.replace("'''", "*")
-        return oneline
-
-    with open('generated_lists/des_conference_list_{date}.txt'.format(date=cur_date.strftime('%d%m%y')), "w+") as outfile:
-        for line in contents:
-            outfile.write(xcs_to_des(line))
+        update_or_nah = input("Update or nah: ")
+        if update_or_nah != "nah":
+            field_to_update = input("Field Name: ")
+            new_value = input("New value: ")
+            print('')
+            new_doc[field_to_update] = new_value
+            db[table_name].update_one(doc, {"$set": new_doc}, upsert=False)
 
 
 if __name__ == "__main__":
     the_db = init_db(db_name='ConferenceManager')
-    #read_legacy_conf(the_db)
-    add_conferences(db=the_db, table_name='Conferences')  # Conferences table contains entries from conf_manager.py
-    generate_out_file(db=the_db, table_names=['LegacyConferences', 'Conferences'])
-    #generate_out_file(db=the_db, table_names=['tester'])
+    # update_existing(the_db, "Conferences")
+    add_conferences(db=the_db, table_name='tester')  # Conferences table contains entries from conf_manager.py
+    move_past_conferences(the_db, "Conferences", "PastConferences")
+    generate_out_file(db=the_db, table_names=['Conferences'])
 
 
 
