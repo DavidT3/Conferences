@@ -6,7 +6,7 @@ from datetime import datetime
 from string import ascii_lowercase as alphabet
 
 des_working_groups = ["Clusters", "Galaxy Evolution (and AGN)", "Large-Scale Structure", "Milky Way", "Photo-z",
-                      "Simulation", "Lensing", "Supernovae", "Theory", "Transients", "Gravitational Waves"]
+                      "Simulation", "Lensing", "Supernovae", "Theory", "Time Domain/Gravitational Waves", "General"]
 allowed_keywords = ["Astronomy", "Astrophysics", "Cosmology", "School", "Workshop"]
 section_order = {"General Astronomy/Astrophysics": ["Astrophysics", "Astronomy"], "General Cosmology": ["Cosmology"],
                  "Working Group Specific": des_working_groups, "Schools and Workshops": ["School", "Workshop"]}
@@ -75,7 +75,6 @@ def add_conferences(db, table_name):
             elif start.date() < cur_date:
                 print("Conferences cannot start before the current date!\n")
                 return
-
 
             more_fields = str(input('Add more fields(y/n): ')).lower()
             while more_fields == 'y':
@@ -371,10 +370,16 @@ def generate_out_file(db, table_names):
             substring = header_string.format(j=2, i=ind+1, n=section)
             if section != "Working Group Specific":
                 for entry in section_order[section]:
-                    for conf in confs:
-                        if entry in conf["Keyword(s)"]:
-                            substring += format_entry(conf) + "\n"
+                    if "General" not in section:
+                        for conf in confs:
+                            if entry in conf["Keyword(s)"]:
+                                substring += format_entry(conf) + "\n"
+                    else:
+                        for conf in confs:
+                            if entry in conf["Keyword(s)"] and "General" in conf["Working Group(s)"]:
+                                substring += format_entry(conf) + "\n"
             else:
+                section_order[section].remove("General")
                 for sub_ind, wg in enumerate(section_order[section]):
                     sub_substring = header_string.format(j=3, i=str(ind+1)+alphabet[sub_ind], n=wg)
                     for conf in confs:
@@ -425,7 +430,7 @@ def generate_out_file(db, table_names):
 
             record["Keyword(s)"] = ", ".join(record["Keyword(s)"])
             des_conf_list.append(record)
-            if "Clusters" in record["Working Group(s)"]:
+            if "Clusters" in record["Working Group(s)"] or "General" in record["Working Group(s)"]:
                 xcs_conf_list.append(record)
 
     with open('generated_lists/xcs_conference_list_{date}.txt'.format(date=cur_date.strftime('%d%m%y')), 'w') as xcs_conf:
@@ -464,7 +469,7 @@ def update_existing(db, table_name, conf_name=None):
 if __name__ == "__main__":
     the_db = init_db(db_name='ConferenceManager')
     # update_existing(the_db, "Conferences")
-    add_conferences(db=the_db, table_name='tester')  # Conferences table contains entries from conf_manager.py
+    # add_conferences(db=the_db, table_name='Conferences')  # Conferences table contains entries from conf_manager.py
     move_past_conferences(the_db, "Conferences", "PastConferences")
     generate_out_file(db=the_db, table_names=['Conferences'])
 
